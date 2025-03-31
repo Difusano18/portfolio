@@ -3919,6 +3919,18 @@ No matching component was found for:
   z-index: 1;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 20;
+  }
   
   h1 {
     font-size: 3.5rem;
@@ -3932,7 +3944,8 @@ No matching component was found for:
     -webkit-text-fill-color: transparent;
     
     @media (max-width: 768px) {
-      font-size: 2.5rem;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -3944,7 +3957,7 @@ No matching component was found for:
     padding: 0;
     
     @media (max-width: 768px) {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 `,JX=ta(Kg.div)`
@@ -3963,7 +3976,7 @@ No matching component was found for:
   @media (max-width: 768px) {
     position: fixed;
     top: auto;
-    bottom: calc(40vh + 3rem);
+    bottom: calc(35vh + 3rem);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -4044,7 +4057,7 @@ No matching component was found for:
     right: 0;
     margin: 0 auto;
     width: 90%;
-    max-height: 40vh;
+    max-height: 35vh;
     transform: none;
   }
   
