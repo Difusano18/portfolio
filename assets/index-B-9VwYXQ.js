@@ -3940,6 +3940,15 @@ No matching component was found for:
   z-index: 10;
   backdrop-filter: blur(10px);
   
+  @media (max-width: 768px) {
+    position: fixed;
+    top: auto;
+    bottom: calc(40vh + 3rem);
+    right: 50%;
+    transform: translateX(50%);
+    width: calc(100% - 2rem);
+  }
+  
   h2 {
     color: white;
     font-size: 1.2rem;
@@ -3994,8 +4003,38 @@ No matching component was found for:
   border-radius: 15px;
   padding: 1.5rem;
   width: 300px;
+  max-height: calc(100vh - 28rem);
+  overflow-y: auto;
   z-index: 10;
   backdrop-filter: blur(10px);
+  
+  @media (max-width: 768px) {
+    position: fixed;
+    top: auto;
+    bottom: 2rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: calc(100% - 2rem);
+    max-height: 40vh;
+  }
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
   
   h3 {
     color: var(--neon-pink);
@@ -4003,6 +4042,10 @@ No matching component was found for:
     margin-bottom: 1rem;
     text-align: center;
     text-shadow: 0 0 5px var(--neon-pink);
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 0;
   }
 `,OX=ta(qg.div)`
   background: rgba(255, 255, 255, 0.05);
