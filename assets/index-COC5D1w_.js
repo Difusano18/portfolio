@@ -4069,13 +4069,18 @@ No matching component was found for:
   h3 {
     color: var(--neon-pink);
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    padding: 1.5rem;
     text-align: center;
     text-shadow: 0 0 5px var(--neon-pink);
     position: sticky;
-    top: 0;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 0.5rem 0;
+    top: -1.5rem;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 1;
   }
 `,ej=ta(Kg.div)`
   background: rgba(255, 255, 255, 0.05);
